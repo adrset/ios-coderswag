@@ -27,13 +27,25 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Takes a cell from the top, that is no longer seen and fills it with data of a cell to be displayed - just not to have 100 cells in memory, instead to have few of them reusable
         
-        // Remember to set an identifier in storyboard!
+        // Remember to set an identifier in storyboar
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as? CategoryCell{
             let category = DataService.instance.getCategories()[indexPath.row]
             cell.updateViews(category: category)
             return cell
         }else{
             return CategoryCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = DataService.instance.getCategories()[indexPath.row]
+        performSegue(withIdentifier: "ProductsVC", sender: category)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productsVC = segue.destination as? ProductsVC {
+            assert(sender as? Category != nil)
+            productsVC.initProducts(category: sender as! Category)
         }
     }
     
