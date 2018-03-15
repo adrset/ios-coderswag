@@ -144,7 +144,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPK-hb-x6L">
-                                                    <rect key="frame" x="5" y="241" width="167" height="18"/>
+                                                    <rect key="frame" x="5" y="231" width="167" height="18"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                                     <color key="textColor" red="0.2035878636" green="0.20560358500000001" blue="0.20560358500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -154,12 +154,13 @@
                                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="lKO-1K-07c" firstAttribute="leading" secondItem="6tK-LM-1ne" secondAttribute="leading" constant="5" id="5qZ-Jm-0Qv"/>
+                                            <constraint firstItem="HPK-hb-x6L" firstAttribute="top" secondItem="lKO-1K-07c" secondAttribute="bottom" constant="10" id="KTu-Cr-c39"/>
                                             <constraint firstItem="3Fz-Ev-xGg" firstAttribute="leading" secondItem="6tK-LM-1ne" secondAttribute="leading" id="VXp-F4-urF"/>
                                             <constraint firstAttribute="trailing" secondItem="lKO-1K-07c" secondAttribute="trailing" constant="5" id="VcH-Pw-oib"/>
-                                            <constraint firstAttribute="bottom" secondItem="HPK-hb-x6L" secondAttribute="bottom" id="f6F-Ke-FKz"/>
                                             <constraint firstItem="3Fz-Ev-xGg" firstAttribute="top" secondItem="6tK-LM-1ne" secondAttribute="top" id="g9j-9w-nfR"/>
                                             <constraint firstAttribute="trailing" secondItem="HPK-hb-x6L" secondAttribute="trailing" constant="5" id="gw8-4T-aRm"/>
                                             <constraint firstAttribute="trailing" secondItem="3Fz-Ev-xGg" secondAttribute="trailing" id="hcw-21-hac"/>
+                                            <constraint firstAttribute="bottom" secondItem="HPK-hb-x6L" secondAttribute="bottom" constant="10" id="pGB-CX-IpW"/>
                                             <constraint firstItem="lKO-1K-07c" firstAttribute="top" secondItem="3Fz-Ev-xGg" secondAttribute="bottom" constant="8" id="pNu-hn-QAJ"/>
                                             <constraint firstItem="HPK-hb-x6L" firstAttribute="leading" secondItem="6tK-LM-1ne" secondAttribute="leading" constant="5" id="zZc-1E-ewa"/>
                                         </constraints>

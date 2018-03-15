@@ -25,6 +25,9 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     
     func initProducts(category: Category){
         products = DataService.instance.getProducts(forCategory: category.title)
+        
+        // Acces navigation bar
+        navigationItem.title = category.title
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

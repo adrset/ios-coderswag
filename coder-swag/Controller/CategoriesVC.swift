@@ -43,9 +43,16 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if let productsVC = segue.destination as? ProductsVC {
+            
+            // Back button will belong to this VC, in order to edit it I need to crate a new one and assign it to navigation item
+            let barBtn = UIBarButtonItem()
+            navigationItem.backBarButtonItem = barBtn
+            
             assert(sender as? Category != nil)
             productsVC.initProducts(category: sender as! Category)
+           
         }
     }
     
